@@ -1,0 +1,13 @@
+.slide .container {
+  width: 100%;
+  padding: 70px;
+}
+.slide .container h1 {
+  font-size: 30px;
+}
+.slide .container p {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/*# sourceMappingURL=max_width_575.css.map */

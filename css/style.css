@@ -14,17 +14,22 @@
   margin: 0 auto;
 }
 
+.nav {
+  z-index: 1000;
+  display: block;
+}
 .nav .container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 .nav .container .logo {
-  flex: 1;
+  width: 25%;
   padding-right: 20px;
   padding-left: 10px;
 }
 .nav .container .logo a img {
-  width: 100%;
+  max-width: 100%;
 }
 .nav .container .menu {
   margin-left: 5px;
@@ -55,7 +60,7 @@
   display: none;
   transition: all 0.3s ease;
   position: absolute;
-  bottom: -110px;
+  bottom: -115px;
   width: 180px;
   background-color: #fff;
   z-index: 1;
@@ -74,6 +79,7 @@
 }
 .nav .container .menu li > a {
   text-decoration: none;
+  line-height: 1.5;
   font-size: 14px;
   text-align: center;
   padding: 32px 14px;
@@ -135,8 +141,8 @@
 }
 
 .slide {
+  margin-top: 4px;
   width: 100%;
-  height: 700px;
   background-image: url(../images/slider1.jpg);
   background-position: center center;
   color: white;
@@ -144,9 +150,10 @@
 .slide .container {
   width: 70%;
   margin: 0 auto;
+  padding-top: 170px;
+  padding-bottom: 260px;
 }
 .slide h1 {
-  padding-top: 17%;
   font-size: 60px;
   font-weight: bold;
   font-family: sans-serif;
@@ -194,12 +201,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .cards .container .card {
   width: 23%;
-  height: 250px;
   background-color: #fdb632;
-  padding: 15px;
+  padding: 15px 15px 30px 15px;
   text-align: center;
   border-radius: 12px;
   margin-top: -80px;
@@ -257,6 +264,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section1 .container .section1-img {
   width: 54%;
@@ -314,10 +322,10 @@
 }
 .section2 .container {
   width: 80%;
-  height: 750px;
+  padding-top: 80px;
+  padding-bottom: 90px;
 }
 .section2 .container > h1 {
-  padding-top: 6%;
   color: white;
   font-size: 48px;
   text-align: center;
@@ -338,14 +346,11 @@
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section2 .container .cards .card {
   width: 30%;
-  height: 480px;
   background-color: #fff;
-}
-.section2 .container .cards .card .img {
-  height: 230px;
 }
 .section2 .container .cards .card .img img {
   width: 100%;
@@ -380,13 +385,14 @@
 
 .section3 {
   background-image: url(../images/section3_bg.jpg);
-  background-position: center center;
-  height: 450px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+  padding: 70px 0;
 }
 .section3 .container {
   width: 70%;
-  padding-top: 5%;
   text-align: center;
 }
 .section3 .container h1 {
@@ -431,8 +437,9 @@
   margin-bottom: 50px;
 }
 .section4 .container .video {
-  height: 480px;
+  padding: 200px 0;
   background-image: url("../images/section4_bg.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   border: 14px solid #fff;
@@ -440,12 +447,17 @@
   text-align: center;
 }
 .section4 .container .video .playbt a {
-  width: 32px;
+  width: 42px;
   height: 44px;
   background-color: #fff;
   border-radius: 50%;
   padding: 18px 20px 18px 28px;
   position: relative;
+  color: red;
+  text-align: center;
+}
+.section4 .container .video .playbt a i {
+  vertical-align: middle;
 }
 
 .section5 {
@@ -457,9 +469,12 @@
   padding: 75px 0px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section5 .container .text {
-  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 23%;
 }
 .section5 .container .text h1 {
@@ -476,6 +491,7 @@
   font-family: "Open Sans";
 }
 .section5 .container .text a {
+  display: inline-block;
   padding-top: 20px;
   font-size: 15px;
   text-decoration: none;
@@ -494,23 +510,20 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: flex-start;
 }
 .section5 .container .cards .card {
   margin-top: 20px;
   width: 32%;
-  height: 200px;
   position: relative;
 }
 .section5 .container .cards .card:hover .icon {
   background-color: rgba(70, 70, 70, 0.4);
-  width: 100%;
-  height: 100%;
-  padding: 80px 100px;
+  padding: 39% 50%;
   transform: translate(-50%, -50%);
 }
 .section5 .container .cards .card img {
-  width: 100%;
+  max-width: 100%;
 }
 .section5 .container .cards .card .icon {
   width: 0;
@@ -518,25 +531,26 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   transition: 0.3s;
   overflow: hidden;
+  transform: translate(-50%, -50%);
 }
 .section5 .container .cards .card i {
   color: #fff;
   background-color: #fdb632;
   padding: 10px;
+  transform: translate(-50%, -50%);
 }
 
 .section6 {
   width: 100%;
   background-color: #fff;
+  padding-top: 60px;
 }
 .section6 .container {
   width: 80%;
 }
 .section6 .container > p {
-  padding-top: 60px;
   color: #b2b2b2;
   font-size: 20px;
   letter-spacing: 3px;
@@ -670,6 +684,7 @@
   display: flex;
   margin-bottom: 10px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section8 .container .cards .card {
   width: 23%;
@@ -678,6 +693,7 @@
 }
 .section8 .container .cards .card .img {
   overflow: hidden;
+  width: 100%;
 }
 .section8 .container .cards .card .img img {
   max-width: 100%;
@@ -692,6 +708,7 @@
   letter-spacing: 2px;
   margin-top: 6px;
   color: #212529;
+  margin-bottom: 20px;
 }
 .section8 .container .cards .card .hover {
   width: 100%;
@@ -731,6 +748,7 @@
 .section9 .container .cards {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .section9 .container .cards .card {
   width: 31%;
@@ -751,6 +769,10 @@
   font-size: 24px;
   color: black;
   font-weight: 600;
+  transition: all 0.3s ease-out;
+}
+.section9 .container .cards .card .text a:hover {
+  color: red;
 }
 .section9 .container .cards .card .text p {
   margin-top: 10px;
@@ -769,6 +791,191 @@
   top: -42px;
   left: 50%;
   border-radius: 10px 10px 0 0;
+}
+
+.section10 {
+  background-color: #e33f20;
+  padding: 50px 0;
+}
+.section10 .container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section10 .container .text {
+  color: white;
+  width: 50%;
+}
+.section10 .container .text h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.section10 .container .text p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.section10 .container .input {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.section10 .container .input input {
+  flex: 1;
+  border: none;
+  font-size: 16px;
+  padding: 24px 22px 24px 65px;
+  color: #767676;
+}
+.section10 .container .input input:focus {
+  outline: none;
+}
+.section10 .container .input .icon {
+  position: absolute;
+  top: 27px;
+  left: 20px;
+  color: #767676;
+}
+.section10 .container .input .icon i {
+  font-size: 30px;
+  line-height: 1;
+}
+.section10 .container .input a {
+  background: #000;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 24px 22px;
+}
+
+.section11 {
+  background-color: #232936;
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.section11 .container {
+  width: 80%;
+  color: #bcc5d0;
+  font-family: "Open Sans";
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.section11 .container h3 {
+  color: white;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.section11 .container .f1 {
+  width: 28%;
+}
+.section11 .container .f1 img {
+  max-width: 100%;
+}
+.section11 .container .f1 p {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.section11 .container .f2 {
+  width: 19%;
+}
+.section11 .container .f2 ul {
+  padding-left: 20px;
+}
+.section11 .container .f2 ul li {
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+.section11 .container .f2 ul li a {
+  text-decoration: none;
+  color: #bcc5d0;
+  font-size: 14px;
+  transition: all 0.2s ease-out;
+}
+.section11 .container .f2 ul li a:hover {
+  color: #e83e8c;
+}
+.section11 .container .f3 {
+  width: 24%;
+}
+.section11 .container .f3 ul li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  line-height: 26px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bcc5d0;
+}
+.section11 .container .f4 {
+  width: 24%;
+  padding-left: 10px;
+}
+.section11 .container .f4 ul li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.section11 .container .f4 ul li i {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.section11 .container .f4 ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  font-weight: none;
+}
+.section11 .container .f4 ul li a:hover {
+  color: #28a745;
+}
+.section11 .container .f4 ul li .tel {
+  font-size: 26px;
+  font-weight: bold;
+}
+.section11 .container .f4 ul li:nth-child(4) {
+  display: flex;
+}
+.section11 .container .f4 ul li:nth-child(4) a {
+  margin-right: 10px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.section11 .container .f4 ul li:nth-child(4) a:first-child {
+  background-color: #3c599b;
+}
+.section11 .container .f4 ul li:nth-child(4) a:nth-child(2) {
+  background-color: #1ea1f3;
+}
+.section11 .container .f4 ul li:nth-child(4) a:nth-child(3) {
+  background-color: #cd2e80;
+}
+.section11 .container .f4 ul li:nth-child(4) a:nth-child(4) {
+  background-color: #fb000f;
+}
+.section11 .container .f4 ul li:nth-child(4) a i {
+  transform: translateX(3px);
+}
+
+.footer {
+  padding: 25px 0;
+}
+.footer .container {
+  width: 80%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

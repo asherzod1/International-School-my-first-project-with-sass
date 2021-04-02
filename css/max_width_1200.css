@@ -1,0 +1,18 @@
+.nav .container .logo {
+  width: 100%;
+  padding: 15px;
+  margin-top: 6px;
+  background-color: #f3f3f3;
+  display: block;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.nav .container .menu li > a {
+  padding: 34px 16px !important;
+}
+
+.slide {
+  margin-top: 19px;
+}
+
+/*# sourceMappingURL=max_width_1200.css.map */
